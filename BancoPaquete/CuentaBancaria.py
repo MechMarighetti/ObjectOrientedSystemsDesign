@@ -15,8 +15,8 @@ class CuentaBancaria(ABC):
 
     def depositar(self, monto_a_depositar):
         if monto_a_depositar > 0:
-            self.__saldo += monto_a_depositar
-            self.__movimientos.append((date.today(), "depósito", monto_a_depositar, self.__saldo))
+            self.saldo += monto_a_depositar
+            self.movimientos.append((date.today(), "depósito", monto_a_depositar, self.__saldo))
             return True
         return False
 
