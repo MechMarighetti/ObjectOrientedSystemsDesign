@@ -6,7 +6,7 @@ class ElementoDuplicadoError(ValueError):
     def __str__(self):
         return f'{self.mensaje}'
 
-def agregar_una_vez(lista, elem):
+def agregar_una_vez(lista, elem) -> ElementoDuplicadoError:
     if elem in lista:
         raise ElementoDuplicadoError(f"Error: Imposible añadir elementos duplicados => {elem} ya existe en la lista")
     else:
@@ -16,6 +16,7 @@ def main():
     listaOriginal = [1, 5, -2]
     agregar = [10, -2, "Hola", 7, "Arroz"]
     sumar = [10, 2, -7, 3]
+    agregar_una_vez(listaOriginal, 5)
 
     for valor in agregar:
         try:
@@ -28,6 +29,8 @@ def main():
             agregar_una_vez(listaOriginal, valor)
         except ValueError as e:
             print(f'{e}')
+            
+
 
     print("Elementos de la lista:", listaOriginal)
 
