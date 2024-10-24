@@ -1,5 +1,5 @@
 from datetime import date
-from CuentasBancarias import CuentaBancaria
+from BancoPaquete import CuentaBancaria
 
 class CajaDeAhorro(CuentaBancaria):
     def __init__(self, nro_cuenta, cbu, alias, saldo, monto_limite_extracciones, monto_limite_transferencias, cant_extracciones_disponibles, cant_transferencias_disponibles):

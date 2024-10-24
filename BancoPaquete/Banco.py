@@ -1,4 +1,4 @@
-from CuentasBancarias import Cliente
+from BancoPaquete import Cliente
 
 class Banco:
     def __init__(self, nombre, domicilio):
