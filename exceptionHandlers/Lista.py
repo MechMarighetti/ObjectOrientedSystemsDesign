@@ -16,7 +16,6 @@ def main():
     listaOriginal = [1, 5, -2]
     agregar = [10, -2, "Hola", 7, "Arroz"]
     sumar = [10, 2, -7, 3]
-    agregar_una_vez(listaOriginal, 5)
 
     for valor in agregar:
         try:
