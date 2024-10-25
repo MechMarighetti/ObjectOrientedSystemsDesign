@@ -5,18 +5,21 @@ class ListaDeTareas:
     # Agregar una tarea a la lista
     def agregarTarea(self, tarea):
         if tarea:  # Verifica que la tarea exista 
-            self.__lista_tareas.append(tarea)
-            return "Tarea agregada correctamente a la lista"
+            try:
+                self.__lista_tareas.append(tarea)
+            except ValueError: "La tarea no fue agregada a la lista"
         else:
-            return "La tarea no fue agregada a la lista"
+            return "Tarea agregada correctamente a la lista" 
 
     # Eliminar una tarea de la lista
     def eliminarTarea(self, tarea):
         if tarea in self.__lista_tareas:
-            self.__lista_tareas.remove(tarea)
-            return "Tarea eliminada correctamente de la lista"
+            try:
+                self.__lista_tareas.remove(tarea)
+            except ValueError:
+                return "Error: la tarea no existe en la lista"
         else:
-            return "La tarea no fue eliminada de la lista"
+            return "La tarea fue eliminada de la lista"
 
     # Método para mostrar la lista de tareas
     def mostrarTareas(self):
